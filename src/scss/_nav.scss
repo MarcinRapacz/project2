@@ -1,0 +1,114 @@
+@import "./variables";
+
+.Nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-family: "Montserrat", sans-serif;
+  background-color: rgba($color: #fff, $alpha: 0.5);
+  transition: 0.3s;
+  z-index: 3;
+
+  &--hide {
+    transform: translate(-50%, -100px);
+  }
+
+  @media (min-width: $desktop-s-bp) {
+    grid-template-columns: repeat(4, 1fr);
+    transform: translate(-50%, 0);
+  }
+
+  &__header {
+    justify-self: center;
+    align-self: center;
+    grid-column: span;
+    margin: 0;
+  }
+
+  &__list {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    margin: 0;
+    right: -320px;
+    height: 100vh;
+    max-width: 320px;
+    width: 80%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: rgba($color: #fff, $alpha: 0.5);
+    transition: 0.3s;
+
+    &--show {
+      transform: translate(-320px, 100px);
+    }
+
+    @media (min-width: $desktop-s-bp) {
+      position: static;
+      flex-direction: row;
+      grid-column: 3 span;
+      height: auto;
+      max-width: unset;
+      width: auto;
+      background-color: transparent;
+      padding-right: 5rem;
+      transform: none;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    flex-grow: 1;
+  }
+
+  &__link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    line-height: calc(100vh / 8);
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: 0.7);
+    }
+
+    @media (min-width: $desktop-s-bp) {
+      position: static;
+      font-size: 1rem;
+      transform: none;
+      line-height: 5rem;
+
+      &--small {
+        line-height: 3rem;
+      }
+    }
+  }
+
+  &__hamburger {
+    justify-self: end;
+    margin: 1rem 2rem;
+    font-size: 2.4rem;
+    cursor: pointer;
+
+    @media (min-width: $desktop-s-bp) {
+      display: none;
+    }
+  }
+}
