@@ -9,7 +9,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   font-family: "Montserrat", sans-serif;
-  background-color: rgba($color: #fff, $alpha: 0.5);
+  color: $color-dark;
+  background-color: rgba($color: $color-light, $alpha: 0.5);
   transition: 0.3s;
   z-index: 3;
 
@@ -25,7 +26,7 @@
   &__header {
     justify-self: center;
     align-self: center;
-    grid-column: span;
+    grid-column: 1 span;
     margin: 0;
   }
 
@@ -42,7 +43,7 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    background-color: rgba($color: #fff, $alpha: 0.5);
+    background-color: rgba($color: $color-light, $alpha: 0.5);
     transition: 0.3s;
 
     &--show {
@@ -75,7 +76,7 @@
     width: 100%;
     line-height: calc(100vh / 8);
     display: block;
-    color: black;
+    color: $color-dark;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -86,7 +87,7 @@
     transition: 0.3s;
 
     &:hover {
-      background-color: rgba($color: #fff, $alpha: 0.7);
+      background-color: rgba($color: $color-light, $alpha: 0.7);
     }
 
     @media (min-width: $desktop-s-bp) {

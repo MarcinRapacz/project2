@@ -1,7 +1,77 @@
 .Logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 110vh;
   background-image: url("../images/logo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  color: $color-dark;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-stretch: 200%;
+
+    &--dark {
+      font-size: 2.8rem;
+      @media (min-width: $desktop-s-bp) {
+        font-size: 4rem;
+      }
+    }
+    &--primary {
+      color: $color-primary;
+      font-size: 2.6rem;
+      @media (min-width: $desktop-s-bp) {
+        font-size: 3.8rem;
+      }
+    }
+    &--secondary {
+      font-size: 1.6rem;
+      letter-spacing: 1rem;
+    }
+
+    @media (min-width: $desktop-s-bp) {
+      transform: translateX(-200px);
+    }
+  }
+
+  &__description {
+    margin: 2rem;
+    text-align: center;
+    max-width: 640px;
+    @media (min-width: $desktop-s-bp) {
+      transform: translateX(-200px);
+    }
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    border: 1px solid $color-primary;
+    background-color: $color-primary;
+    color: $color-light;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: $color-light;
+      color: $color-primary;
+    }
+
+    @media (min-width: $desktop-s-bp) {
+      transform: translateX(-200px);
+    }
+  }
 }
