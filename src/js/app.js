@@ -1,3 +1,3 @@
-import nav from "./nav";
-import product from "./product";
+import "./nav";
+import "./product";
 import "../scss/main.scss";
