@@ -1,0 +1,30 @@
+.Brand {
+  padding: 3rem 0 2rem;
+  background-color: $color-medium;
+
+  @media (min-width: $tablet) {
+    padding: 5rem 0 3rem;
+  }
+  &__container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    justify-items: center;
+  }
+
+  &__icon {
+    font-size: 2rem;
+    color: rgba($color: $color-dark, $alpha: 0.7);
+    transition: 0.3s;
+    @media (min-width: $tablet) {
+      font-size: 4.5rem;
+    }
+
+    &:hover {
+      color: rgba($color: $color-dark, $alpha: 0.9);
+    }
+  }
+}
