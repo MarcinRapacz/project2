@@ -1,0 +1,111 @@
+.Footer {
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 5rem 1rem;
+  background-image: url("../images/footer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $color-light;
+
+  &__container {
+    display: grid;
+    gap: 1rem;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    @media (min-width: $tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__section {
+    display: grid;
+    // grid-template-rows: auto 1fr;
+    &--double-section {
+      grid-template-rows: 1fr auto;
+    }
+    &--double-column {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__subsection {
+    display: grid;
+    &--double-column {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__header {
+    font-size: 1.2rem;
+    &--subsection {
+      grid-column: span 2;
+    }
+  }
+  &__desc {
+    line-height: 1.6rem;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    &--row {
+      flex-direction: row;
+      justify-content: space-evenly;
+      @media (min-width: $tablet) {
+        max-width: 240px;
+        justify-content: space-between;
+      }
+    }
+  }
+  &__list-item {
+    list-style: none;
+    &--margin {
+      margin: 0.3rem 0;
+    }
+  }
+  &__icon {
+    width: 10px;
+    padding-right: 1rem;
+    font-size: 1.2rem;
+    &--biger {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__nav {
+    @media (min-width: $tablet) {
+      grid-column: span 3;
+      margin: 0 auto;
+      max-width: 680px;
+    }
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(3, 1ffr);
+      gap: 1rem;
+      padding: 0;
+      @media (min-width: $tablet) {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(1, 1ffr);
+        justify-items: center;
+      }
+    }
+    &-list-item {
+      list-style: none;
+    }
+  }
+
+  &__licence {
+    margin: 0;
+    text-align: center;
+    font-size: 0.6rem;
+    font-weight: normal;
+    opacity: 0.8;
+    @media (min-width: $tablet) {
+      grid-column: span 3;
+    }
+  }
+}
