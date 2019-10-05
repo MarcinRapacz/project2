@@ -108,4 +108,15 @@
       grid-column: span 3;
     }
   }
+
+  &__btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "Roboto", sans-serif;
+    color: $color-light;
+    cursor: pointer;
+  }
 }
